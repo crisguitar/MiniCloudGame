@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3949A33D1815871600A4CD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33C1815871600A4CD8C /* Foundation.framework */; };
+		3949A33F1815871600A4CD8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33E1815871600A4CD8C /* CoreGraphics.framework */; };
+		3949A3411815871600A4CD8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3401815871600A4CD8C /* UIKit.framework */; };
+		3949A3431815871600A4CD8C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3421815871600A4CD8C /* SpriteKit.framework */; };
+		3949A3491815871600A4CD8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3949A3471815871600A4CD8C /* InfoPlist.strings */; };
+		3949A34B1815871600A4CD8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A34A1815871600A4CD8C /* main.m */; };
+		3949A34F1815871600A4CD8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A34E1815871600A4CD8C /* AppDelegate.m */; };
+		3949A3521815871600A4CD8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949A3501815871600A4CD8C /* Main.storyboard */; };
+		3949A3551815871600A4CD8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A3541815871600A4CD8C /* ViewController.m */; };
+		3949A3581815871600A4CD8C /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A3571815871600A4CD8C /* MyScene.m */; };
+		3949A35A1815871600A4CD8C /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3949A3591815871600A4CD8C /* Spaceship.png */; };
+		3949A35C1815871600A4CD8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3949A35B1815871600A4CD8C /* Images.xcassets */; };
+		3949A3631815871600A4CD8C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3621815871600A4CD8C /* XCTest.framework */; };
+		3949A3641815871600A4CD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33C1815871600A4CD8C /* Foundation.framework */; };
+		3949A3651815871600A4CD8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3401815871600A4CD8C /* UIKit.framework */; };
+		3949A36D1815871600A4CD8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3949A36B1815871600A4CD8C /* InfoPlist.strings */; };
+		3949A36F1815871600A4CD8C /* SKTexturesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A36E1815871600A4CD8C /* SKTexturesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3949A3661815871600A4CD8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3949A3311815871600A4CD8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3949A3381815871600A4CD8C;
+			remoteInfo = SKTextures;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3949A3391815871600A4CD8C /* SKTextures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTextures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3949A33C1815871600A4CD8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3949A33E1815871600A4CD8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3949A3401815871600A4CD8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3949A3421815871600A4CD8C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3949A3461815871600A4CD8C /* SKTextures-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKTextures-Info.plist"; sourceTree = "<group>"; };
+		3949A3481815871600A4CD8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3949A34A1815871600A4CD8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3949A34C1815871600A4CD8C /* SKTextures-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTextures-Prefix.pch"; sourceTree = "<group>"; };
+		3949A34D1815871600A4CD8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3949A34E1815871600A4CD8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3949A3511815871600A4CD8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3949A3531815871600A4CD8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3949A3541815871600A4CD8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3949A3561815871600A4CD8C /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		3949A3571815871600A4CD8C /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		3949A3591815871600A4CD8C /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		3949A35B1815871600A4CD8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3949A3611815871600A4CD8C /* SKTexturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKTexturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3949A3621815871600A4CD8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3949A36A1815871600A4CD8C /* SKTexturesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKTexturesTests-Info.plist"; sourceTree = "<group>"; };
+		3949A36C1815871600A4CD8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3949A36E1815871600A4CD8C /* SKTexturesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTexturesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3949A3361815871600A4CD8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A33F1815871600A4CD8C /* CoreGraphics.framework in Frameworks */,
+				3949A3411815871600A4CD8C /* UIKit.framework in Frameworks */,
+				3949A3431815871600A4CD8C /* SpriteKit.framework in Frameworks */,
+				3949A33D1815871600A4CD8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3949A35E1815871600A4CD8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A3631815871600A4CD8C /* XCTest.framework in Frameworks */,
+				3949A3651815871600A4CD8C /* UIKit.framework in Frameworks */,
+				3949A3641815871600A4CD8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3949A3301815871600A4CD8C = {
+			isa = PBXGroup;
+			children = (
+				3949A3441815871600A4CD8C /* SKTextures */,
+				3949A3681815871600A4CD8C /* SKTexturesTests */,
+				3949A33B1815871600A4CD8C /* Frameworks */,
+				3949A33A1815871600A4CD8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3949A33A1815871600A4CD8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3949A3391815871600A4CD8C /* SKTextures.app */,
+				3949A3611815871600A4CD8C /* SKTexturesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3949A33B1815871600A4CD8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3949A33C1815871600A4CD8C /* Foundation.framework */,
+				3949A33E1815871600A4CD8C /* CoreGraphics.framework */,
+				3949A3401815871600A4CD8C /* UIKit.framework */,
+				3949A3421815871600A4CD8C /* SpriteKit.framework */,
+				3949A3621815871600A4CD8C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3949A3441815871600A4CD8C /* SKTextures */ = {
+			isa = PBXGroup;
+			children = (
+				3949A34D1815871600A4CD8C /* AppDelegate.h */,
+				3949A34E1815871600A4CD8C /* AppDelegate.m */,
+				3949A3501815871600A4CD8C /* Main.storyboard */,
+				3949A3531815871600A4CD8C /* ViewController.h */,
+				3949A3541815871600A4CD8C /* ViewController.m */,
+				3949A3561815871600A4CD8C /* MyScene.h */,
+				3949A3571815871600A4CD8C /* MyScene.m */,
+				3949A3591815871600A4CD8C /* Spaceship.png */,
+				3949A35B1815871600A4CD8C /* Images.xcassets */,
+				3949A3451815871600A4CD8C /* Supporting Files */,
+			);
+			path = SKTextures;
+			sourceTree = "<group>";
+		};
+		3949A3451815871600A4CD8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3949A3461815871600A4CD8C /* SKTextures-Info.plist */,
+				3949A3471815871600A4CD8C /* InfoPlist.strings */,
+				3949A34A1815871600A4CD8C /* main.m */,
+				3949A34C1815871600A4CD8C /* SKTextures-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3949A3681815871600A4CD8C /* SKTexturesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3949A36E1815871600A4CD8C /* SKTexturesTests.m */,
+				3949A3691815871600A4CD8C /* Supporting Files */,
+			);
+			path = SKTexturesTests;
+			sourceTree = "<group>";
+		};
+		3949A3691815871600A4CD8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3949A36A1815871600A4CD8C /* SKTexturesTests-Info.plist */,
+				3949A36B1815871600A4CD8C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3949A3381815871600A4CD8C /* SKTextures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3949A3721815871600A4CD8C /* Build configuration list for PBXNativeTarget "SKTextures" */;
+			buildPhases = (
+				3949A3351815871600A4CD8C /* Sources */,
+				3949A3361815871600A4CD8C /* Frameworks */,
+				3949A3371815871600A4CD8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKTextures;
+			productName = SKTextures;
+			productReference = 3949A3391815871600A4CD8C /* SKTextures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3949A3601815871600A4CD8C /* SKTexturesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3949A3751815871600A4CD8C /* Build configuration list for PBXNativeTarget "SKTexturesTests" */;
+			buildPhases = (
+				3949A35D1815871600A4CD8C /* Sources */,
+				3949A35E1815871600A4CD8C /* Frameworks */,
+				3949A35F1815871600A4CD8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3949A3671815871600A4CD8C /* PBXTargetDependency */,
+			);
+			name = SKTexturesTests;
+			productName = SKTexturesTests;
+			productReference = 3949A3611815871600A4CD8C /* SKTexturesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3949A3311815871600A4CD8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Cris Pinto";
+				TargetAttributes = {
+					3949A3601815871600A4CD8C = {
+						TestTargetID = 3949A3381815871600A4CD8C;
+					};
+				};
+			};
+			buildConfigurationList = 3949A3341815871600A4CD8C /* Build configuration list for PBXProject "SKTextures" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3949A3301815871600A4CD8C;
+			productRefGroup = 3949A33A1815871600A4CD8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3949A3381815871600A4CD8C /* SKTextures */,
+				3949A3601815871600A4CD8C /* SKTexturesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3949A3371815871600A4CD8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A3491815871600A4CD8C /* InfoPlist.strings in Resources */,
+				3949A35C1815871600A4CD8C /* Images.xcassets in Resources */,
+				3949A35A1815871600A4CD8C /* Spaceship.png in Resources */,
+				3949A3521815871600A4CD8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3949A35F1815871600A4CD8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A36D1815871600A4CD8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3949A3351815871600A4CD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A3581815871600A4CD8C /* MyScene.m in Sources */,
+				3949A3551815871600A4CD8C /* ViewController.m in Sources */,
+				3949A34F1815871600A4CD8C /* AppDelegate.m in Sources */,
+				3949A34B1815871600A4CD8C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3949A35D1815871600A4CD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3949A36F1815871600A4CD8C /* SKTexturesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3949A3671815871600A4CD8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3949A3381815871600A4CD8C /* SKTextures */;
+			targetProxy = 3949A3661815871600A4CD8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3949A3471815871600A4CD8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3949A3481815871600A4CD8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3949A3501815871600A4CD8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3949A3511815871600A4CD8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3949A36B1815871600A4CD8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3949A36C1815871600A4CD8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3949A3701815871600A4CD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3949A3711815871600A4CD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3949A3731815871600A4CD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKTextures/SKTextures-Prefix.pch";
+				INFOPLIST_FILE = "SKTextures/SKTextures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3949A3741815871600A4CD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKTextures/SKTextures-Prefix.pch";
+				INFOPLIST_FILE = "SKTextures/SKTextures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3949A3761815871600A4CD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKTextures.app/SKTextures";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKTextures/SKTextures-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SKTexturesTests/SKTexturesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3949A3771815871600A4CD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKTextures.app/SKTextures";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKTextures/SKTextures-Prefix.pch";
+				INFOPLIST_FILE = "SKTexturesTests/SKTexturesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3949A3341815871600A4CD8C /* Build configuration list for PBXProject "SKTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3949A3701815871600A4CD8C /* Debug */,
+				3949A3711815871600A4CD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3949A3721815871600A4CD8C /* Build configuration list for PBXNativeTarget "SKTextures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3949A3731815871600A4CD8C /* Debug */,
+				3949A3741815871600A4CD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3949A3751815871600A4CD8C /* Build configuration list for PBXNativeTarget "SKTexturesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3949A3761815871600A4CD8C /* Debug */,
+				3949A3771815871600A4CD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3949A3311815871600A4CD8C /* Project object */;
+}
