@@ -17,7 +17,6 @@
 		3949A3521815871600A4CD8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3949A3501815871600A4CD8C /* Main.storyboard */; };
 		3949A3551815871600A4CD8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A3541815871600A4CD8C /* ViewController.m */; };
 		3949A3581815871600A4CD8C /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3949A3571815871600A4CD8C /* MyScene.m */; };
-		3949A35A1815871600A4CD8C /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 3949A3591815871600A4CD8C /* Spaceship.png */; };
 		3949A35C1815871600A4CD8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3949A35B1815871600A4CD8C /* Images.xcassets */; };
 		3949A3631815871600A4CD8C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3621815871600A4CD8C /* XCTest.framework */; };
 		3949A3641815871600A4CD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33C1815871600A4CD8C /* Foundation.framework */; };
@@ -53,7 +52,6 @@
 		3949A3541815871600A4CD8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3949A3561815871600A4CD8C /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		3949A3571815871600A4CD8C /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		3949A3591815871600A4CD8C /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		3949A35B1815871600A4CD8C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3949A3611815871600A4CD8C /* SKTexturesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKTexturesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3949A3621815871600A4CD8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -128,7 +126,6 @@
 				3949A3541815871600A4CD8C /* ViewController.m */,
 				3949A3561815871600A4CD8C /* MyScene.h */,
 				3949A3571815871600A4CD8C /* MyScene.m */,
-				3949A3591815871600A4CD8C /* Spaceship.png */,
 				3949A35B1815871600A4CD8C /* Images.xcassets */,
 				3949A3451815871600A4CD8C /* Supporting Files */,
 			);
@@ -242,7 +239,6 @@
 			files = (
 				3949A3491815871600A4CD8C /* InfoPlist.strings in Resources */,
 				3949A35C1815871600A4CD8C /* Images.xcassets in Resources */,
-				3949A35A1815871600A4CD8C /* Spaceship.png in Resources */,
 				3949A3521815871600A4CD8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
