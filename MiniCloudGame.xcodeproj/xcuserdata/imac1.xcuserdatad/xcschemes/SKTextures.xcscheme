@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3949A3381815871600A4CD8C"
-               BuildableName = "SKTextures.app"
-               BlueprintName = "SKTextures"
-               ReferencedContainer = "container:SKTextures.xcodeproj">
+               BuildableName = "MiniCloudGame.app"
+               BlueprintName = "MiniCloudGame"
+               ReferencedContainer = "container:MiniCloudGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3949A3601815871600A4CD8C"
-               BuildableName = "SKTexturesTests.xctest"
-               BlueprintName = "SKTexturesTests"
-               ReferencedContainer = "container:SKTextures.xcodeproj">
+               BuildableName = "MiniCloudGameTests.xctest"
+               BlueprintName = "MiniCloudGameTests"
+               ReferencedContainer = "container:MiniCloudGame.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3949A3381815871600A4CD8C"
-            BuildableName = "SKTextures.app"
-            BlueprintName = "SKTextures"
-            ReferencedContainer = "container:SKTextures.xcodeproj">
+            BuildableName = "MiniCloudGame.app"
+            BlueprintName = "MiniCloudGame"
+            ReferencedContainer = "container:MiniCloudGame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3949A3381815871600A4CD8C"
-            BuildableName = "SKTextures.app"
-            BlueprintName = "SKTextures"
-            ReferencedContainer = "container:SKTextures.xcodeproj">
+            BuildableName = "MiniCloudGame.app"
+            BlueprintName = "MiniCloudGame"
+            ReferencedContainer = "container:MiniCloudGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3949A3381815871600A4CD8C"
-            BuildableName = "SKTextures.app"
-            BlueprintName = "SKTextures"
-            ReferencedContainer = "container:SKTextures.xcodeproj">
+            BuildableName = "MiniCloudGame.app"
+            BlueprintName = "MiniCloudGame"
+            ReferencedContainer = "container:MiniCloudGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
