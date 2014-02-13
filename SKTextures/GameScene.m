@@ -7,23 +7,22 @@
 //
 
 #import "GameScene.h"
-
-@interface GameScene() {
-    BOOL _isTouching;
-    // NSTimer *_upTimer;
-    BOOL _nodeRemoved;
-    BOOL _isCreated;
-    BOOL _willRemove;
-    BOOL _isCloudDeformed;
-    int _obstaclesCount;
-    BOOL _gameOver;
-}
-@property SKSpriteNode *background;
-@property SKSpriteNode *cloud;
-@end
+#import "MenuScene.h"
 
 static const uint32_t cloudCategory    =  0x1 << 0;
 static const uint32_t obstacleCategory =  0x1 << 1;
+
+@interface GameScene() {
+    
+    BOOL _isCloudDeformed;
+    int _obstaclesCount;
+    BOOL _gameOver;
+    
+}
+@property SKSpriteNode *background;
+@property SKSpriteNode *cloud;
+
+@end
 
 @implementation GameScene
 
@@ -38,10 +37,6 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 
 -(void)didMoveToView:(SKView *)view
 {
-    _isTouching = NO;
-    _nodeRemoved = NO;
-    _isCreated = NO;
-    _willRemove = NO;
     _obstaclesCount = 0;
     _isCloudDeformed = NO;
     _gameOver = NO;
@@ -67,24 +62,16 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     
 }
 
--(UIColor *)randomBrightColor
+-(UIColor *)randomColorWithValue:(int)value
 {
-    while (true) {
-        float requiredBrightness = 192.0/255.0;
-        float red = (arc4random() % 255) / 255.0;
-        float green = (arc4random() % 255) / 255.0;
-        float blue = (arc4random() % 255) / 255.0;
-        if (red > requiredBrightness || green > requiredBrightness || blue > requiredBrightness) {
-            UIColor *randomColor = [SKColor colorWithRed:red green:green blue:blue alpha:1.0];
-            return randomColor;
-        }
-    }
+    return [UIColor colorWithRed:[self randomNumberBetween:value and:255]/255.0 green:[self randomNumberBetween:value and:255]/255.0 blue:[self randomNumberBetween:value and:255]/255.0 alpha:1.0];
 }
 
 -(void)generateBackground
 {
     [_background removeFromParent];
-    _background = [self spriteWithColor:[self randomBrightColor] size:self.frame.size];
+    // _background = [self spriteWithColor:[self randomBrightColor] size:self.frame.size];
+    _background = [self spriteWithColor:[self randomColorWithValue:200] size:self.frame.size];
     _background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     _background.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, self.frame.size.height) toPoint:CGPointMake(self.frame.size.width, self.frame.size.height)];
     _background.physicsBody.dynamic = YES;
@@ -104,9 +91,9 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     [self addChild:top];
     
     // temporary bottom
-    SKSpriteNode *bottom = [SKSpriteNode spriteNodeWithColor:[SKColor colorWithWhite:0 alpha:0] size:CGSizeMake(self.frame.size.width, 20)];
+    SKSpriteNode *bottom = [SKSpriteNode spriteNodeWithColor:[SKColor colorWithWhite:0 alpha:0] size:CGSizeMake(self.frame.size.width, 10)];
     bottom.position = CGPointMake(CGRectGetMidX(self.frame), 10);
-    bottom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width, 20)];
+    bottom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bottom.size];
     bottom.physicsBody.dynamic = NO;
     bottom.physicsBody.affectedByGravity = NO;
     
@@ -135,7 +122,7 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 {
     SKSpriteNode *obstacle = [[SKSpriteNode alloc] initWithImageNamed:@"rainbow"];
     obstacle.name = @"obstacle";
-    obstacle.position = CGPointMake((arc4random() % 400) + self.frame.size.width, (arc4random() % (int)(self.frame.size.height - 20)));
+    obstacle.position = CGPointMake((arc4random() % 400) + self.frame.size.width, [self randomNumberBetween:20 and:self.size.height - 20]);
     obstacle.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:(obstacle.size.width/2)];
     obstacle.physicsBody.categoryBitMask = obstacleCategory;
     obstacle.physicsBody.collisionBitMask = cloudCategory;
@@ -146,18 +133,11 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     float scale = [self randomNumberBetween:1 and:4] / 2.0;
     obstacle.size = CGSizeMake(obstacle.size.width * scale, obstacle.size.height * scale);
     
-    SKAction *changeColor = [SKAction  colorizeWithColor:[self randomBrightColor] colorBlendFactor:0.6 duration:0.1];
+    SKAction *changeColor = [SKAction  colorizeWithColor:[self randomColorWithValue:60] colorBlendFactor:1 duration:0.1];
     SKAction *moveLeft = [SKAction moveByX: -[self randomNumberBetween:30 and:50] y:0 duration:0.2];
     
     [self addChild:obstacle];
     _obstaclesCount++;
-    
-//    if ((_obstaclesCount % 3) == 0) {
-//        
-//        
-//    } else if ((_obstaclesCount % 5) == 0) {
-//        obstacle.size = CGSizeMake(obstacle.size.width * 0.7, obstacle.size.height * 0.7);
-//    }
     
     [obstacle runAction:changeColor];
     [obstacle runAction:[SKAction repeatActionForever:moveLeft]];
@@ -169,6 +149,8 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    // check for game over
     _cloud.physicsBody.affectedByGravity = NO;
     [_cloud.physicsBody setVelocity:CGVectorMake(0, 0)];
     SKAction *stretch = [SKAction scaleYTo:1.1 duration:0.3];
@@ -183,6 +165,8 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     _cloud.physicsBody.affectedByGravity = YES;
 }
 
+
+// contact detection will not be used, so yeah...
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
     SKPhysicsBody *firstBody, *secondBody;
@@ -196,29 +180,15 @@ static const uint32_t obstacleCategory =  0x1 << 1;
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
+    // check contact
     if ((firstBody.categoryBitMask & cloudCategory) != 0 && (secondBody.collisionBitMask & cloudCategory) != 0)
     {
-        NSLog(@"CONTACT!!!");
+        
+        // NSLog(@"CONTACT!!!");
     }
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
-    
-    if (_obstaclesCount < 10) {
-        [self generateObstacle];
-    }
-    
-    [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *node, BOOL *stop) {
-        
-        SKSpriteNode *theNode = (SKSpriteNode *)node;
-        
-        if (theNode.position.x + theNode.size.width < 0) {
-            [node removeFromParent];
-            _obstaclesCount--;
-        }
-    }];
-    
+- (void)deformCloudDueToVelocity {
     if (!_isCloudDeformed && abs(_cloud.physicsBody.velocity.dy) > 200) {
         SKAction *stretch = [SKAction scaleYTo:1.1 duration:0.3];
         [_cloud runAction:stretch];
@@ -228,6 +198,52 @@ static const uint32_t obstacleCategory =  0x1 << 1;
         [_cloud runAction:stretch];
         _isCloudDeformed = NO;
     }
+}
+
+- (void)spawnObstacles {
+    
+    if (_obstaclesCount < 15) {
+        [self generateObstacle];
+    }
+}
+
+- (void)removeObstacleWhenNotVisible {
+    [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+        SKSpriteNode *theNode = (SKSpriteNode *)node;
+        
+        if (theNode.position.x + theNode.size.width < 0) {
+            [node removeFromParent];
+            _obstaclesCount--;
+        }
+    }];
+}
+
+-(void)checkGameOver
+{
+    if (!_gameOver && _cloud.position.x < 0) {
+        NSLog(@"Game Over!!");
+        _gameOver = YES;
+        [self showGameOver];
+    }
+    
+}
+
+-(void)showGameOver
+{
+    SKTransition *transition = [SKTransition doorsCloseHorizontalWithDuration:1];
+    transition.pausesIncomingScene = YES;
+    MenuScene *menuScene = [[MenuScene alloc] initWithSize:self.size];
+    [self.scene.view presentScene:menuScene transition:transition];
+}
+
+-(void)update:(CFTimeInterval)currentTime {
+    
+    /* Called before each frame is rendered */
+    [self spawnObstacles];
+    [self removeObstacleWhenNotVisible];
+    [self deformCloudDueToVelocity];
+    [self checkGameOver];
     
 }
 

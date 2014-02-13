@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E2CC1401-5E75-4F31-9D60-B4A60BDC54A2</string>
+	<string>4ACE886B-186F-4418-B07B-D538EC5A9C9A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MiniCloudGame</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8A20066A-8A5A-4DA2-A928-A7B273F6D5C3</key>
-		<string>imac1@localhost:git/iOS/SHTextures</string>
+		<key>F3DB2478-F23C-408D-8D22-3F1069C69AC0</key>
+		<string>https://github.com/crisguitar/MiniCloudGame.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MiniCloudGame.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8A20066A-8A5A-4DA2-A928-A7B273F6D5C3</key>
+		<key>F3DB2478-F23C-408D-8D22-3F1069C69AC0</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>imac1@localhost:git/iOS/SHTextures</string>
+	<string>https://github.com/crisguitar/MiniCloudGame.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8A20066A-8A5A-4DA2-A928-A7B273F6D5C3</string>
+	<string>F3DB2478-F23C-408D-8D22-3F1069C69AC0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8A20066A-8A5A-4DA2-A928-A7B273F6D5C3</string>
+			<string>F3DB2478-F23C-408D-8D22-3F1069C69AC0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SKTextures</string>
+			<string>MiniCloudGame</string>
 		</dict>
 	</array>
 </dict>
