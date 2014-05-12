@@ -17,10 +17,11 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     BOOL _isCloudDeformed;
     int _obstaclesCount;
     BOOL _gameOver;
-    
+    SKSpriteNode *_background;
+    SKSpriteNode *_character;
+    NSArray *_characterMovementFrames;
 }
-@property SKSpriteNode *background;
-@property SKSpriteNode *cloud;
+
 
 @end
 
@@ -48,6 +49,7 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 {
     [self generateBackground];
     [self generateTop];
+    [self setupCharacterFrames];
     [self generateCharacter];
     [self generateObstacle];
 }
@@ -70,7 +72,6 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 -(void)generateBackground
 {
     [_background removeFromParent];
-    // _background = [self spriteWithColor:[self randomBrightColor] size:self.frame.size];
     _background = [self spriteWithColor:[self randomColorWithValue:200] size:self.frame.size];
     _background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     _background.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, self.frame.size.height) toPoint:CGPointMake(self.frame.size.width, self.frame.size.height)];
@@ -103,19 +104,33 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 
 -(void)generateCharacter
 {
-    [_cloud removeFromParent];
-    _cloud = [SKSpriteNode spriteNodeWithImageNamed:@"cloud"];
-    _cloud.name = @"cloud";
-    _cloud.position = CGPointMake(100, self.frame.size.height - 125);
-    _cloud.zPosition = 100;
-    _cloud.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:_cloud.size.height/2];
-    _cloud.physicsBody.categoryBitMask = cloudCategory;
-    _cloud.physicsBody.collisionBitMask = obstacleCategory;
-    _cloud.physicsBody.contactTestBitMask = obstacleCategory;
-    _cloud.physicsBody.usesPreciseCollisionDetection = YES;
-    _cloud.physicsBody.dynamic = YES;
-    _cloud.physicsBody.affectedByGravity = YES;
-    [self addChild:_cloud];
+    [_character removeFromParent];
+    //_character = [SKSpriteNode spriteNodeWithImageNamed:@"character"];
+    _character = [SKSpriteNode spriteNodeWithTexture:_characterMovementFrames[0]];
+    _character.name = @"character";
+    _character.position = CGPointMake(100, self.frame.size.height - 125);
+    _character.zPosition = 100;
+    _character.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_character.size];
+    _character.physicsBody.categoryBitMask = cloudCategory;
+    _character.physicsBody.collisionBitMask = obstacleCategory;
+    _character.physicsBody.contactTestBitMask = obstacleCategory;
+    _character.physicsBody.usesPreciseCollisionDetection = YES;
+    _character.physicsBody.dynamic = YES;
+    _character.physicsBody.affectedByGravity = YES;
+    [self addChild:_character];
+}
+
+- (void)setupCharacterFrames
+{
+    NSMutableArray *movementFrames = [NSMutableArray array];
+    SKTextureAtlas *characterAtlas = [SKTextureAtlas atlasNamed:@"character_move"];
+    int numImages = characterAtlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"character_%d", i];
+        SKTexture *texture = [characterAtlas textureNamed:textureName];
+        [movementFrames addObject:texture];
+    }
+    _characterMovementFrames = movementFrames;
 }
 
 -(void)generateObstacle
@@ -150,19 +165,17 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    // check for game over
-    _cloud.physicsBody.affectedByGravity = NO;
-    [_cloud.physicsBody setVelocity:CGVectorMake(0, 0)];
+    _character.physicsBody.affectedByGravity = NO;
+    [_character.physicsBody setVelocity:CGVectorMake(0, 0)];
     SKAction *stretch = [SKAction scaleYTo:1.1 duration:0.3];
     SKAction *stretchBack = [SKAction scaleYTo:1 duration:0.5];
-    [_cloud runAction:[SKAction sequence:@[stretch, stretchBack]]];
-//    [_cloud.physicsBody applyImpulse:CGVectorMake(0, 30)];
-    [_cloud.physicsBody applyForce:CGVectorMake(0, 300)];
+    [_character runAction:[SKAction sequence:@[stretch, stretchBack]]];
+    [_character.physicsBody applyForce:CGVectorMake(0, 300)];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    _cloud.physicsBody.affectedByGravity = YES;
+    _character.physicsBody.affectedByGravity = YES;
 }
 
 
@@ -188,21 +201,9 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     }
 }
 
-- (void)deformCloudDueToVelocity {
-    if (!_isCloudDeformed && abs(_cloud.physicsBody.velocity.dy) > 200) {
-        SKAction *stretch = [SKAction scaleYTo:1.1 duration:0.3];
-        [_cloud runAction:stretch];
-        _isCloudDeformed = YES;
-    } else if (_isCloudDeformed && abs(_cloud.physicsBody.velocity.dy) < 100) {
-        SKAction *stretch = [SKAction scaleYTo:1 duration:0.3];
-        [_cloud runAction:stretch];
-        _isCloudDeformed = NO;
-    }
-}
-
 - (void)spawnObstacles {
     
-    if (_obstaclesCount < 15) {
+    if (_obstaclesCount < 7) {
         [self generateObstacle];
     }
 }
@@ -221,7 +222,7 @@ static const uint32_t obstacleCategory =  0x1 << 1;
 
 -(void)checkGameOver
 {
-    if (!_gameOver && _cloud.position.x < 0) {
+    if (!_gameOver && _character.position.x < 0) {
         NSLog(@"Game Over!!");
         _gameOver = YES;
         [self showGameOver];
@@ -242,7 +243,6 @@ static const uint32_t obstacleCategory =  0x1 << 1;
     /* Called before each frame is rendered */
     [self spawnObstacles];
     [self removeObstacleWhenNotVisible];
-    [self deformCloudDueToVelocity];
     [self checkGameOver];
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136DEBE01920446300A26339 /* character_move.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 136DEBDF1920446300A26339 /* character_move.atlas */; };
 		3949A33D1815871600A4CD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33C1815871600A4CD8C /* Foundation.framework */; };
 		3949A33F1815871600A4CD8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A33E1815871600A4CD8C /* CoreGraphics.framework */; };
 		3949A3411815871600A4CD8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949A3401815871600A4CD8C /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		136DEBDF1920446300A26339 /* character_move.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = character_move.atlas; path = ../../../Desktop/character_move.atlas; sourceTree = "<group>"; };
 		3949A3391815871600A4CD8C /* MiniCloudGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniCloudGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3949A33C1815871600A4CD8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3949A33E1815871600A4CD8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,7 @@
 		3949A3441815871600A4CD8C /* MiniCloudGame */ = {
 			isa = PBXGroup;
 			children = (
+				136DEBDF1920446300A26339 /* character_move.atlas */,
 				3949A34D1815871600A4CD8C /* AppDelegate.h */,
 				3949A34E1815871600A4CD8C /* AppDelegate.m */,
 				3949A3501815871600A4CD8C /* Main.storyboard */,
@@ -212,7 +215,7 @@
 		3949A3311815871600A4CD8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Cris Pinto";
 				TargetAttributes = {
 					3949A3601815871600A4CD8C = {
@@ -246,6 +249,7 @@
 			files = (
 				3949A3491815871600A4CD8C /* InfoPlist.strings in Resources */,
 				3949A35C1815871600A4CD8C /* Images.xcassets in Resources */,
+				136DEBE01920446300A26339 /* character_move.atlas in Resources */,
 				3949A3521815871600A4CD8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +327,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -362,7 +365,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,7 +424,6 @@
 		3949A3761815871600A4CD8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKTextures.app/SKTextures";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -445,7 +446,6 @@
 		3949A3771815871600A4CD8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SKTextures.app/SKTextures";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -45,7 +45,7 @@
 
 -(void)generateBackground
 {
-    _background = [[SKSpriteNode alloc] initWithColor:[UIColor colorWithRed:1.0 green:1.0 blue:243.0/255.0 alpha:1.0] size:CGSizeMake(self.frame.size.width, self.frame.size.height)];
+    _background = [[SKSpriteNode alloc] initWithColor:[UIColor colorWithRed:239.0/255.0 green:241.0/255.0 blue:244.0/255.0 alpha:1.0] size:CGSizeMake(self.frame.size.width, self.frame.size.height)];
     _background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     
     [self addChild:_background];
@@ -54,6 +54,7 @@
 -(void)generateButtons
 {
     _gameButton = [[SKSpriteNode alloc] initWithColor:[UIColor colorWithRed:40.0/255.0 green:87.0/255.0 blue:97.0/255.0 alpha:1] size:CGSizeMake(100, 30)];
+    _gameButton = [[SKSpriteNode alloc] initWithImageNamed:@"play_button"];
     _gameButton.position = CGPointMake(CGRectGetMidX(self.frame), 300);
     _gameButton.name = @"gameButton";
     

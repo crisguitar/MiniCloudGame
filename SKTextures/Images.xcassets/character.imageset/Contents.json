@@ -1,18 +1,25 @@
 {
   "images" : [
     {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "bolt_mini.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "bolt.png"
+      "filename" : "character_1.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "bolt-1.png",
+      "filename" : "character_1-1.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }

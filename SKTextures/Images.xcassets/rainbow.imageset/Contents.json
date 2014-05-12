@@ -2,8 +2,7 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "rainbow_mini.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",

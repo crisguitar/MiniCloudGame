@@ -2,17 +2,16 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "Noise.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "Noise-hd.png"
+      "filename" : "Noisei5.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "Noisei5.png",
+      "filename" : "Noisei5-1.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }

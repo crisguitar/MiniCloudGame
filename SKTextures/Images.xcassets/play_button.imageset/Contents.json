@@ -1,26 +1,17 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
       "idiom" : "iphone",
-      "scale" : "1x",
-      "filename" : "cloud.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "cloudHD.png"
+      "filename" : "play_button.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "cloudHD-1.png",
+      "filename" : "play_button-1.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }
